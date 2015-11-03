@@ -8,6 +8,7 @@ namespace MappedMemoryFiles
     {
         static void Main(string[] args)
         {
+            //内存映射文件
             using (var mmFile = MemoryMappedFile.CreateFromFile(@"TextFile.txt", System.IO.FileMode.Create, "fileHandle", 1024 * 1024))
             {
                 string valueToWrite = "Written to the mapped-memory file on " + DateTime.Now.ToString();
